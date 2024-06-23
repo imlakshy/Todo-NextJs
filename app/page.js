@@ -6,10 +6,19 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Home() {
-  const initialTodos = JSON.parse(localStorage.getItem('todosData')) || [];
+  // const initialTodos = JSON.parse(localStorage.getItem('todosData')) || [];
   const [activeBtn, setactiveBtn] = useState(0);
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState(initialTodos)
+  const [todos, setTodos] = useState(initialTodos);
+
+
+  //Changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedTodos = JSON.parse(localStorage.getItem('todosData')) || [];
+      setTodos(storedTodos);
+    }
+  }, []);
 
   const fetchData = async () => {
     const dataR = await axios.get("/api/");
@@ -20,9 +29,12 @@ export default function Home() {
     fetchData();
   }, [])
 
+  //Changes
   useEffect(() => {
-    localStorage.setItem("todosData", JSON.stringify(todos));
-  }, [todos])
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("todosData", JSON.stringify(todos));
+    }
+  }, [todos]);
 
 
   const addTodo = async () => {
