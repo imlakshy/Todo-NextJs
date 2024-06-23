@@ -9,7 +9,7 @@ export default function Home() {
   // const initialTodos = JSON.parse(localStorage.getItem('todosData')) || [];
   const [activeBtn, setactiveBtn] = useState(0);
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState([]);
 
 
   //Changes
