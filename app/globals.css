@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Jost";
-}
-
 body {
   margin: 0;
   padding: 0;

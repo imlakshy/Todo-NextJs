@@ -1,7 +1,6 @@
-import { Inter } from "next/font/google";
+import { jost } from "./font";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Jost } from "next/font/google";
 
 export const metadata = {
   title: "Simple Todo",
@@ -11,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={jost.className}>{children}</body>
     </html>
   );
 }
