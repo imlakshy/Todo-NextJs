@@ -66,7 +66,7 @@ export default function Home() {
       <div className="greet flex flex-col justify-center">
         <span className="md:text-[48px] font-light">Hey 👋</span>
         <span className="text-5xl md:text-[96px] font-extrabold my-[8px]">Lakshya!</span>
-        <p className="text-xs md:text-[24px] font-extralight  text-gray-400">Let's get those tasks done!</p>
+        <p className="text-xs md:text-[24px] font-extralight  text-gray-400">Let&apos;s get those tasks done!</p>
       </div>
 
       <div className="right main overflow-y-auto scrollbar-hidden p-5 bg-neutral-800  min-w-[375px-2.5rem] max-w-[550px] md:w-[550px] rounded-[13px]">
