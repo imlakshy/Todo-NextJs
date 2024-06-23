@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-*{font-family: var(--font-jost);}
+* {
+  font-family: var(--font-jost);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -12,15 +15,24 @@ body {
 
 .button {
   padding: 5px 10px;
+  color: #808080;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  
+}
+
+.btnActive {
+  transition: all 0.3s ease;
+  background-color: #171717;
+  padding: 5px 10px;
   color: white;
   text-align: center;
   text-decoration: none;
   border-radius: 20px;
   margin-right: 10px;
-}
-
-.btnActive {
-  background-color: #171717;
 }
 
 .checkBox {
@@ -29,4 +41,8 @@ body {
   border: 2px solid #808080;
   border-radius: 100%;
   cursor: pointer;
+}
+.tasks{
+  overflow-y: auto;
+  scrollbar-width: none;
 }

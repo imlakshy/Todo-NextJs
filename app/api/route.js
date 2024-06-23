@@ -28,11 +28,14 @@ export async function POST(req) {
 export async function DELETE(req) {
     await dbConnect();
 
-
     let data = await req.json();
-    const todo  = data.item.todo;
-    
-    await Todo.findOneAndDelete({ todo: todo });
+
+    if (data.item) {
+        const todo = data.item.todo;
+        await Todo.findOneAndDelete({ todo: todo });
+    } else {
+        await Todo.deleteMany({});
+    }
 
     return NextResponse.json({ sucess: true })
 }
