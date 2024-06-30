@@ -108,7 +108,7 @@ export default function Home() {
   }
 
   return (<>
-    {openModal && (<Modal setOpenModal={setOpenModal} deleteAll={deleteAll} signOut={logOut} />)}
+    {openModal && (<Modal setOpenModal={setOpenModal} deleteAll={deleteAll} signOut={logOut} openModalValue={openModal} />)}
 
     <div className="flex flex-col md:flex-row justify-center md:justify-around md:items-center px-5 gap-10 h-[100vh] ">
       <div className="greet flex flex-col justify-center">
