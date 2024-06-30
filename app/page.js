@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import app from "@/config";
 import { getAuth, signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
-import { Router, useRouter } from "next/navigation";
 import Modal from "./components/Modal";
 
 export default function Home() {
@@ -18,8 +17,6 @@ export default function Home() {
   const [completedTodos, setcompletedTodos] = useState([]);
   const [user, setUser] = useState();
   const [openModal, setOpenModal] = useState(false)
-
-  const router = useRouter();
 
   const fetchData = async () => {
     const dataR = await axios.get("/api/");
